@@ -9,7 +9,7 @@ try {
   const authToken = core.getInput('auth-token');
   const workingDirectory = core.getInput('working-directory', { required: false });
 
-  const directory = workingDirectory ? `/${workingDirectory}` :  process.cwd();
+  const directory = workingDirectory ? `/${workingDirectory}`.replace(/\/+/, '/') :  process.cwd();
 
   console.log('Writing to .npmrc');
 
