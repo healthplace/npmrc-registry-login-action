@@ -9,7 +9,7 @@ try {
   const authToken = core.getInput('auth-token');
   const workingDirectory = core.getInput('working-directory', { required: false });
 
-  const directory = path.join(__dirname, '/', workingDirectory);
+  const directory = path.join(process.env.GITHUB_WORKSPACE, '/', workingDirectory);
 
   console.log('Writing to .npmrc');
 
