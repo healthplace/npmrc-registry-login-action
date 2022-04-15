@@ -20,6 +20,10 @@ You have the ability to login to multiple registries by using this action multip
 
 **Required** The registry auth token.
 
+### `working-directory`
+
+**Optional** The directory to manage the .npmrc file in.
+
 ## Examples
 
 ```yml
@@ -34,9 +38,9 @@ You can also use with `working-directory` to run in another directory:
 
 ```yml
 uses: healthplace/npmrc-registry-login-action@v1.0
-working-directory: dist
 with:
   scope: '@acmeorg'
   registry: 'https://npm.pkg.github.com'
   auth-token: 'secret'
+  working-directory: dist
 ```

@@ -16,6 +16,9 @@ inputs:
   auth-token:
     description: 'The registry auth token'
     required: true
+  working-directory:
+    description: 'The directory to manage the .npmrc file in (defaults to the currnet directory)'
+    required: false
 
 runs:
   using: 'node16'
