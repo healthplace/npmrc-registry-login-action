@@ -1,0 +1,27 @@
+{
+  "name": "@healthplace/npmrc-registry-login-action",
+  "version": "1.0.0",
+  "description": "A GitHub Action for adding registry credentials to a .npmrc file.",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/healthplace/npmrc-registry-login-action.git"
+  },
+  "keywords": [
+    "action",
+    "npmrc",
+    "npm",
+    "node"
+  ],
+  "author": "Health Place @healthplace",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/healthplace/npmrc-registry-login-action/issues"
+  },
+  "homepage": "https://github.com/healthplace/npmrc-registry-login-action#readme",
+  "dependencies": {
+    "@actions/core": "^1.6.0",
+    "@actions/github": "^5.0.1"
+  }
+}
