@@ -1,6 +1,6 @@
 {
   "name": "@healthplace/npmrc-registry-login-action",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A GitHub Action for adding registry credentials to a .npmrc file.",
   "main": "index.js",
   "scripts": {},

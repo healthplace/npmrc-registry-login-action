@@ -42,5 +42,8 @@ with:
   scope: '@acmeorg'
   registry: 'https://npm.pkg.github.com'
   auth-token: 'secret'
-  working-directory: dist
+  working-directory: ${{ github.workspace }}/dist
 ```
+
+> Make sure you run the `actions/checkout` action before, in order to get access
+> to the `${{ github.workspace }}` variable.
