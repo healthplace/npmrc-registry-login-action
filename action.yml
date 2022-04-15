@@ -2,6 +2,10 @@ name: '.npmrc registry login'
 
 description: 'Logs into NPM registries by managing a .npmrc file'
 
+branding:
+  color: 'red'
+  icon: 'file-plus'
+
 inputs:
   scope:
     description: 'The registry scope (e.g. @acmeorg)'
