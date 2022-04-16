@@ -47,3 +47,10 @@ with:
 
 > Make sure you run the `actions/checkout` action before, in order to get access
 > to the `${{ github.workspace }}` variable.
+
+## Building
+
+```sh
+nvm install
+ncc build index.js --license licenses.txt
+```

@@ -1,5 +1,4 @@
 const core = require('@actions/core');
-const github = require('@actions/github');
 const fs = require('fs');
 const path = require('path');
 
@@ -7,9 +6,9 @@ try {
   const scope = core.getInput('scope');
   const registry = core.getInput('registry');
   const authToken = core.getInput('auth-token');
-  const workingDirectory = core.getInput('working-directory', { required: false });
+  const workingDirectory = core.getInput('working-directory');
 
-  const directory = workingDirectory ? `/${workingDirectory}`.replace(/\/+/, '/') :  process.cwd();
+  const directory = workingDirectory ||  process.cwd();
 
   console.log('Writing to .npmrc');
 
