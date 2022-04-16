@@ -1691,7 +1691,7 @@ try {
   console.log(`Writing to ${npmrcPath}`);
 
   fs.appendFileSync(npmrcPath, `\n${scope}:registry=${registry}`);
-  fs.appendFileSync(npmrcPath, `\n${registry.replace(/^http(?:s)?:/, '')}?:_authToken=${authToken}`);
+  fs.appendFileSync(npmrcPath, `\n${registry.replace(/^http(?:s)?:/, '')}/:_authToken=${authToken}`);
 
   console.info(`Succesfully wrote to ${npmrcPath}`);
 } catch (error) {
