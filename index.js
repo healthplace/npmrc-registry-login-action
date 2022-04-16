@@ -6,16 +6,16 @@ try {
   const scope = core.getInput('scope');
   const registry = core.getInput('registry');
   const authToken = core.getInput('auth-token');
-  const workingDirectory = core.getInput('working-directory');
+  const inputPath = core.getInput('path');
 
-  const directory = workingDirectory ||  process.cwd();
+  const npmrcPath = path.resolve(process.cwd(), inputPath, '.npmrc');
 
-  console.log('Writing to .npmrc');
+  console.log(`Writing to ${npmrcPath}`);
 
-  fs.appendFileSync(path.join(directory, '.npmrc'), `\n${scope}:registry=${registry}`);
-  fs.appendFileSync(path.join(directory, '.npmrc'), `\n${registry.replace(/^http(?:s)?:/, '')}?:_authToken=${authToken}`);
+  fs.appendFileSync(npmrcPath, `\n${scope}:registry=${registry}`);
+  fs.appendFileSync(npmrcPath, `\n${registry.replace(/^http(?:s)?:/, '')}?:_authToken=${authToken}`);
 
-  console.info('Succesfully wrote to .npmrc');
+  console.info(`Succesfully wrote to ${npmrcPath}`);
 } catch (error) {
   core.setFailed(error.message);
 }
