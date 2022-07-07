@@ -34,7 +34,7 @@ with:
   auth-token: 'secret'
 ```
 
-You can also use with `working-directory` to run in another directory:
+You can also use with `path` to run in another directory:
 
 ```yml
 uses: healthplace/npmrc-registry-login-action@v1.0
