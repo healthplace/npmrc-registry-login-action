@@ -21,6 +21,6 @@
   },
   "homepage": "https://github.com/healthplace/npmrc-registry-login-action#readme",
   "dependencies": {
-    "@actions/core": "^1.6.0"
+    "@actions/core": "^1.9.1"
   }
 }
